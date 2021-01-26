@@ -16,6 +16,9 @@
 
 
 ## 06-其他
+1. Identity Server 4
+- [IdentityServer4权限认证](https://www.bilibili.com/video/BV1Qa4y1n7bb)
+- [IdentityServer4原理和实战](https://www.bilibili.com/video/BV16b411k7yM)
 
 
 ## 说明
