@@ -16,7 +16,8 @@ namespace Sample.IdentityServer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            IIdentityServerBuilder builder = services.AddIdentityServer();
+            // https可能有证书问题，在postman请求失败。请求 http://localhost:5000/connect/token
+            var builder = services.AddIdentityServer();
             builder.AddDeveloperSigningCredential();
             builder.AddInMemoryApiScopes(Config.ApiScopes);
             builder.AddInMemoryClients(Config.Clients);
@@ -29,7 +30,6 @@ namespace Sample.IdentityServer
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseIdentityServer();
         }
     }

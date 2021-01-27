@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sample.IdentityServer
 {
-    public static class Config
+    public class Config
     {
         public static IEnumerable<ApiScope> ApiScopes => new[]
         {
