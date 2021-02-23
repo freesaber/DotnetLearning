@@ -9,10 +9,12 @@
 ## 03-entity framework core
 
 
-## 04-ABP
+## 04-待定
 
 
 ## 05-微服务
+1. ABP
+- [奕鼎通-ABP vNext框架](https://www.bilibili.com/video/BV1Xa4y1J7JY)
 
 
 ## 06-其他
