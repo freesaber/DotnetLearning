@@ -15,6 +15,8 @@
 ## 05-微服务
 1. ABP
 - [奕鼎通-ABP vNext框架](https://www.bilibili.com/video/BV1Xa4y1J7JY)
+- [ABP个人博客](https://github.com/Meowv/Blog)
+- [ABP微服务](https://www.cnblogs.com/william-xu/p/12047529.html)
 
 
 ## 06-其他

@@ -17,7 +17,7 @@ namespace WebApplication
         public void ConfigureServices(IServiceCollection services)
         {
             // abp应用添加到启动容器中
-            services.AddApplication<AppModule>();
+            services.AddApplication<AppModule>();//根模块
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
