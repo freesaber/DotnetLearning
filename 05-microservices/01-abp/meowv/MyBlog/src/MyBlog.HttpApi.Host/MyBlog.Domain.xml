@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyBlog.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:MyBlog.Domain.MyBlogDomainModule">
+            <summary>
+            实体领域模型
+            </summary>
+        </member>
+    </members>
+</doc>
