@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
+using MyBlog.HttpApi.Host;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,9 @@ using Volo.Abp.Modularity;
 
 namespace MyBlog
 {
+    /// <summary>
+    /// 相当于一个web项目
+    /// </summary>
     [DependsOn(
        typeof(AbpAspNetCoreMvcModule),
        typeof(AbpAutofacModule),
@@ -20,6 +24,8 @@ namespace MyBlog
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            context.Services.AddSwagger();
+
             base.ConfigureServices(context);
         }
 
@@ -27,6 +33,8 @@ namespace MyBlog
         {
             var app = context.GetApplicationBuilder();
             var env = context.GetEnvironment();
+
+            app.UseSwagger().UseSwaggerUI();
 
             // 环境变量，开发环境
             if (env.IsDevelopment())

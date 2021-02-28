@@ -1,4 +1,5 @@
-﻿using Volo.Abp.AutoMapper;
+﻿using MyBlog.Domain;
+using Volo.Abp.AutoMapper;
 using Volo.Abp.Identity;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
@@ -6,10 +7,11 @@ using Volo.Abp.PermissionManagement;
 namespace MyBlog
 {
     /// <summary>
-    /// 应用模块，这里编写接口和接口实现
+    /// 为我们的应用服务层，在这里编写服务的接口以及对应的实现
     /// </summary>
     [DependsOn(
-        typeof(AbpIdentityApplicationModule)
+        typeof(AbpIdentityApplicationModule),
+        typeof(MyBlogDomainModule)
     )]
     public class MyBlogApplicationModule : AbpModule
     {
