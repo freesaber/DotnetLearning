@@ -1,4 +1,6 @@
-﻿using MyBlog.Domain;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MyBlog.Domain;
+using MyBlog.Domain.Configurations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +27,33 @@ namespace MyBlog.EntityFrameworkCore
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            // ABP会自动为DbContext中的实体创建默认仓储
+            context.Services.AddAbpDbContext<MyBlogDbContext>(options =>
+            {
+                options.AddDefaultRepositories(includeAllEntities: true);
+            });
 
+            Configure<AbpDbContextOptions>(options =>
+            {
+                switch (AppSettings.EnableDb)
+                {
+                    case "MySQL":
+                        options.UseMySQL();
+                        break;
+                    case "SqlServer":
+                        options.UseSqlServer();
+                        break;
+                    case "PostgreSql":
+                        options.UsePostgreSql();
+                        break;
+                    case "Sqlite":
+                        options.UseSqlite();
+                        break;
+                    default:
+                        options.UseMySQL();
+                        break;
+                }
+            });
         }
     }
 }

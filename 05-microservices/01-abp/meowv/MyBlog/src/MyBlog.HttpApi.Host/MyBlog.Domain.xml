@@ -4,9 +4,129 @@
         <name>MyBlog.Domain</name>
     </assembly>
     <members>
+        <member name="T:MyBlog.Domain.Category">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Category.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Category.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="F:MyBlog.Domain.Configurations.AppSettings._config">
+            <summary>
+            配置文件的根节点
+            </summary>
+        </member>
+        <member name="M:MyBlog.Domain.Configurations.AppSettings.#cctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Configurations.AppSettings.EnableDb">
+            <summary>
+            EnableDb
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Configurations.AppSettings.ConnectionStrings">
+            <summary>
+            ConnectionStrings
+            </summary>
+        </member>
+        <member name="T:MyBlog.Domain.FriendLink">
+            <summary>
+            FriendLink
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.FriendLink.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.FriendLink.LinkUrl">
+            <summary>
+            链接
+            </summary>
+        </member>
         <member name="T:MyBlog.Domain.MyBlogDomainModule">
             <summary>
             实体领域模型
+            </summary>
+        </member>
+        <member name="T:MyBlog.Domain.Post">
+            <summary>
+            Post
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Post.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Post.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Post.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Post.Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Post.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Post.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Post.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:MyBlog.Domain.PostTag">
+            <summary>
+            PostTag
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.PostTag.PostId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.PostTag.TagId">
+            <summary>
+            标签Id
+            </summary>
+        </member>
+        <member name="T:MyBlog.Domain.Tag">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Tag.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:MyBlog.Domain.Tag.DisplayName">
+            <summary>
+            展示名称
             </summary>
         </member>
     </members>

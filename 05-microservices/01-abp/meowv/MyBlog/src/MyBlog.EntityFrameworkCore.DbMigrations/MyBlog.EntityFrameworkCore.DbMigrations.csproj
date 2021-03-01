@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
@@ -7,9 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Volo.Abp.Autofac" Version="4.2.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.*" />
-    
+
     <ProjectReference Include="..\MyBlog.EntityFrameworkCore\MyBlog.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
