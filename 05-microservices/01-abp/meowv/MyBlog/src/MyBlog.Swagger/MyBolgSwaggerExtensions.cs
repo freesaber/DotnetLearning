@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyBlog.HttpApi.Host
+namespace MyBlog.Swagger
 {
     public static class MyBolgSwaggerExtensions
     {

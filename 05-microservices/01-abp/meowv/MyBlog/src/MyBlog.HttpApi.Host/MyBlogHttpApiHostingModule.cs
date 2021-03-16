@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
-using MyBlog.HttpApi.Host;
+using MyBlog.Swagger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,8 @@ namespace MyBlog
     [DependsOn(
        typeof(AbpAspNetCoreMvcModule),
        typeof(AbpAutofacModule),
-       typeof(MyBlogHttpApiModule)
+       typeof(MyBlogHttpApiModule),
+       typeof(MyBlogSwaggerModule)
     )]
     public class MyBlogHttpApiHostingModule : AbpModule
     {

@@ -6,7 +6,7 @@
     <members>
         <member name="T:MyBlog.Domain.Category">
             <summary>
-            Category
+            分类表
             </summary>
         </member>
         <member name="P:MyBlog.Domain.Category.CategoryName">
@@ -41,7 +41,7 @@
         </member>
         <member name="T:MyBlog.Domain.FriendLink">
             <summary>
-            FriendLink
+            友情链接表
             </summary>
         </member>
         <member name="P:MyBlog.Domain.FriendLink.Title">
@@ -61,7 +61,7 @@
         </member>
         <member name="T:MyBlog.Domain.Post">
             <summary>
-            Post
+            发表文章表
             </summary>
         </member>
         <member name="P:MyBlog.Domain.Post.Title">
@@ -101,7 +101,7 @@
         </member>
         <member name="T:MyBlog.Domain.PostTag">
             <summary>
-            PostTag
+            文章对应标签表
             </summary>
         </member>
         <member name="P:MyBlog.Domain.PostTag.PostId">
@@ -116,7 +116,7 @@
         </member>
         <member name="T:MyBlog.Domain.Tag">
             <summary>
-            Tag
+            标签表
             </summary>
         </member>
         <member name="P:MyBlog.Domain.Tag.TagName">
