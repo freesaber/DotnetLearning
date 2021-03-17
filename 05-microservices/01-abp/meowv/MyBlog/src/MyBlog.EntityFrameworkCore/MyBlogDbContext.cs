@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyBlog.Domain;
+using MyBlog.Domain.Blog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace MyBlog.EntityFrameworkCore
     /// <summary>
     /// 数据访问上下文对象
     /// </summary>
-    //[ConnectionStringName("MySql")]
+    [ConnectionStringName("MySql")]
     public class MyBlogDbContext : AbpDbContext<MyBlogDbContext>
     {
         public DbSet<Post> Posts { get; set; }

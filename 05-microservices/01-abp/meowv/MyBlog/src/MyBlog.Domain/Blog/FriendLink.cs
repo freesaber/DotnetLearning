@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Entities;
 
-namespace MyBlog.Domain
+namespace MyBlog.Domain.Blog
 {
     /// <summary>
     /// 友情链接表

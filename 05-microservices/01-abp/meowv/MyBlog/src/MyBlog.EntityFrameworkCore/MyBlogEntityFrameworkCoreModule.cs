@@ -12,6 +12,7 @@ using Volo.Abp.EntityFrameworkCore.PostgreSql;
 using Volo.Abp.EntityFrameworkCore.Sqlite;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.Modularity;
+using Volo.Abp.Uow;
 
 namespace MyBlog.EntityFrameworkCore
 {
@@ -31,6 +32,11 @@ namespace MyBlog.EntityFrameworkCore
             context.Services.AddAbpDbContext<MyBlogDbContext>(options =>
             {
                 options.AddDefaultRepositories(includeAllEntities: true);
+            });
+
+            Configure<AbpUnitOfWorkDefaultOptions>(options =>
+            {
+                options.TransactionBehavior = UnitOfWorkTransactionBehavior.Disabled;
             });
 
             Configure<AbpDbContextOptions>(options =>

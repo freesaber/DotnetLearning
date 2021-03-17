@@ -5,21 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Entities;
 
-namespace MyBlog.Domain
+namespace MyBlog.Domain.Blog
 {
     /// <summary>
-    /// 分类表
+    /// 文章对应标签表
     /// </summary>
-    public class Category : Entity<int>
+    public class PostTag : Entity<int>
     {
         /// <summary>
-        /// 分类名称
+        /// 文章Id
         /// </summary>
-        public string CategoryName { get; set; }
+        public int PostId { get; set; }
 
         /// <summary>
-        /// 展示名称
+        /// 标签Id
         /// </summary>
-        public string DisplayName { get; set; }
+        public int TagId { get; set; }
     }
 }

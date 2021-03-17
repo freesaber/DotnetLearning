@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Autofac" Version="4.2.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
     
     <ProjectReference Include="..\MyBlog.HttpApi\MyBlog.HttpApi.csproj" />

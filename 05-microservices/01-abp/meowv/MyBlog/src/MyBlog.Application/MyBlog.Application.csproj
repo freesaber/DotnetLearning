@@ -11,6 +11,7 @@
     <ProjectReference Include="..\MyBlog.Application.Caching\MyBlog.Application.Caching.csproj" />
     <ProjectReference Include="..\MyBlog.Application.Contracts\MyBlog.Application.Contracts.csproj" />
     <ProjectReference Include="..\MyBlog.Domain\MyBlog.Domain.csproj" />
+    <ProjectReference Include="..\MyBlog.EntityFrameworkCore\MyBlog.EntityFrameworkCore.csproj" />
   </ItemGroup>
   
 </Project>

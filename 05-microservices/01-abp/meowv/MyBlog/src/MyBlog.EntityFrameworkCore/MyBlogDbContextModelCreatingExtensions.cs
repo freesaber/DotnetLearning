@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyBlog.Domain;
+using MyBlog.Domain.Blog;
 using MyBlog.Domain.Shared;
 using System;
 using System.Collections.Generic;

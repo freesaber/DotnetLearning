@@ -1,4 +1,5 @@
 ﻿using MyBlog.Domain;
+using MyBlog.EntityFrameworkCore;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Identity;
 using Volo.Abp.Modularity;
@@ -11,7 +12,8 @@ namespace MyBlog
     /// </summary>
     [DependsOn(
         typeof(AbpIdentityApplicationModule),
-        typeof(MyBlogDomainModule)
+        typeof(MyBlogDomainModule),
+        typeof(MyBlogEntityFrameworkCoreModule)
     )]
     public class MyBlogApplicationModule : AbpModule
     {
