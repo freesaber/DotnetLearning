@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
@@ -9,5 +9,9 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Core" Version="4.2.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyBlog.Domain\MyBlog.Domain.csproj" />
   </ItemGroup>
 </Project>

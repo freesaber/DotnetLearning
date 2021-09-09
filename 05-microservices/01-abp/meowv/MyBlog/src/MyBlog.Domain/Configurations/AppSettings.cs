@@ -36,5 +36,7 @@ namespace MyBlog.Domain.Configurations
         /// ConnectionStrings
         /// </summary>
         public static string ConnectionStrings => _config.GetConnectionString(EnableDb);
+
+        public static string ApiVersion => _config["ApiVersion"];
     }
 }

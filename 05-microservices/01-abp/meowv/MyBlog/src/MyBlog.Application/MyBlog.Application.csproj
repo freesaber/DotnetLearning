@@ -12,6 +12,7 @@
     <ProjectReference Include="..\MyBlog.Application.Contracts\MyBlog.Application.Contracts.csproj" />
     <ProjectReference Include="..\MyBlog.Domain\MyBlog.Domain.csproj" />
     <ProjectReference Include="..\MyBlog.EntityFrameworkCore\MyBlog.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\MyBlog.ToolKits\MyBlog.ToolKits.csproj" />
   </ItemGroup>
   
 </Project>

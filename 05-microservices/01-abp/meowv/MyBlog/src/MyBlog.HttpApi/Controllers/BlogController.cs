@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyBlog.Application.Blog;
 using MyBlog.Application.Blog.Dto;
+using MyBlog.Domain.Shared;
+using MyBlog.ToolKits.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,6 +13,7 @@ using Volo.Abp.AspNetCore.Mvc;
 
 namespace MyBlog.HttpApi.Controllers
 {
+    [ApiExplorerSettings(GroupName = Grouping.GroupName_v1)]
     [ApiController]
     [Route("[controller]")]
     public class BlogController : AbpController
@@ -28,7 +31,7 @@ namespace MyBlog.HttpApi.Controllers
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<bool> InsertPostAsync([FromBody] PostDto dto)
+        public async Task<ServiceResult<string>> InsertPostAsync([FromBody] PostDto dto)
         {
             return await _blogService.InsertPostAsync(dto);
         }
@@ -39,7 +42,7 @@ namespace MyBlog.HttpApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete]
-        public async Task<bool> DeletePostAsync([Required] int id)
+        public async Task<ServiceResult> DeletePostAsync([Required] int id)
         {
             return await _blogService.DeletePostAsync(id);
         }
@@ -51,7 +54,7 @@ namespace MyBlog.HttpApi.Controllers
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<bool> UpdatePostAsync([Required] int id, [FromBody] PostDto dto)
+        public async Task<ServiceResult<string>> UpdatePostAsync([Required] int id, [FromBody] PostDto dto)
         {
             return await _blogService.UpdatePostAsync(id, dto);
         }
@@ -62,7 +65,7 @@ namespace MyBlog.HttpApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<PostDto> GetPostAsync([Required] int id)
+        public async Task<ServiceResult<PostDto>> GetPostAsync([Required] int id)
         {
             return await _blogService.GetPostAsync(id);
         }

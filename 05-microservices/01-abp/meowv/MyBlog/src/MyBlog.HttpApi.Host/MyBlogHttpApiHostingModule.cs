@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
+using MyBlog.HttpApi.Host.Middleware;
 using MyBlog.Swagger;
 using System;
 using System.Collections.Generic;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
+using Volo.Abp.AspNetCore.Mvc.ExceptionHandling;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
 
@@ -27,6 +30,14 @@ namespace MyBlog
         {
             context.Services.AddSwagger();
 
+            //Configure<MvcOptions>(options =>
+            //{
+            //    var filterMetadata = options.Filters.FirstOrDefault(x => x is ServiceFilterAttribute attribute && attribute.ServiceType.Equals(typeof(AbpExceptionFilter)));
+
+            //    // 移除 AbpExceptionFilter
+            //    options.Filters.Remove(filterMetadata);
+            //});
+
             base.ConfigureServices(context);
         }
 
@@ -34,6 +45,8 @@ namespace MyBlog
         {
             var app = context.GetApplicationBuilder();
             var env = context.GetEnvironment();
+
+             app.UseMiddleware<ExceptionHandlerMiddleware>();
 
             app.UseSwagger().UseSwaggerUI();
 
